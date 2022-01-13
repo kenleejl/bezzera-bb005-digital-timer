@@ -129,6 +129,7 @@ void loop() {
 
     if (digitalRead(10) == LOW)
     {
+      u8g2.clearBuffer();
       delay(300);
       u8g2.setFont(u8g2_font_inb27_mf);
       u8g2.drawStr(9,40,"1");
@@ -174,7 +175,21 @@ void loop() {
     }
     else
     {
-      doreset();
+      u8g2.setFont(u8g2_font_6x13B_tf);
+      u8g2.drawStr(0,10,"Coffee Grind Timer");
+      u8g2.setFont(u8g2_font_6x10_tf);
+      u8g2.drawStr(100,30,"V1.1");
+      u8g2.sendBuffer();
+    
+      u8g2.setCursor(15, 45);
+      u8g2.print("  cup1: ");
+      u8g2.print(cup1.c_str());
+    
+      u8g2.setCursor(15, 55);
+      u8g2.print("  cup2: ");
+      u8g2.print(cup2.c_str()); 
+      u8g2.sendBuffer(); 
+  
     }
 
   }
@@ -190,7 +205,7 @@ void greeting(){
   u8g2.setFont(u8g2_font_6x13B_tf);
   u8g2.drawStr(0,10,"Coffee Grind Timer");
   u8g2.setFont(u8g2_font_6x10_tf);
-  u8g2.drawStr(100,30,"V1.0");
+  u8g2.drawStr(100,30,"V1.1");
   u8g2.sendBuffer();
 
   u8g2.setCursor(15, 45);
@@ -257,6 +272,7 @@ void grind(int millisec, int cups) {
       u8g2.drawStr(40,40,"Aborted!");
       u8g2.sendBuffer(); 
       delay(2500);
+      u8g2.clearBuffer();
       return;
     }
                 
@@ -270,6 +286,7 @@ void grind(int millisec, int cups) {
   u8g2.drawStr(4,55,"Enjoy your coffee!");
   u8g2.sendBuffer();
   delay(5000);
+  u8g2.clearBuffer();
 }
 
 //===============================================================
