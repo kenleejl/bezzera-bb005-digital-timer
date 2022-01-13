@@ -1,17 +1,17 @@
 # bezzera-bb005-digital-timer based on ESP8266:
-Bezzera BB005 modifikation to setup your grinding Time via digital Timer based on ESP8266
+Bezzera BB005 modification to setup your grinding Time via digital Timer based on ESP8266
 
 ## This Modifikation features:
-- You can install this mod without any modifikation on the original Hardware
+- You can install this mod without any modification on the original Hardware
 - Get 1 or 2 Cups in a difinded time grinded and be able to abort the grinding
 - Define your time for each Cup via a Standalone WLAN in extra Servermode
 - Demo: https://youtu.be/tWOO4BNrsw0
 
 ## This Hardware is needed to run this Software
-- ESP8266 - we choose NodeMCU Amica Modul V2 ESP8266 ESP-12F WIFI Development Board with CP2102 (AZ Delivery)
-- OLED Display - we choose 1,3" OLED Display I2C 128 x 64 Pixel I2C
-- USB Power Supplie - we choose MeanWell RS-15-5 Netzteilbaustein, 15 W, 5 V, 3 A
-- Digital Relay - we choose a 1-Channel-Relay-Modul, 5V, with Optocoupler, High and Low Level Trigger, for Arduino
+- ESP8266 - I chose a NodeMCU v3
+- OLED Display - I chose a 0.96" OLED Display I2C 128 x 32 Pixel I2C (SSD1306)
+- USB Power Supply - I chose to run off a USB Power Adapter with a MicroUSB Cable
+- Digital Relay - we choose a 1-Channel-Relay-Module, 5V, with Optocoupler, High and Low Level Trigger, for Arduino
 - little help maybe: https://www.carto.net/andre.mw/photos/thematic/household/bezzera_macinino_bb005/
 
 ## circuit diagram
@@ -24,10 +24,7 @@ Bezzera BB005 modifikation to setup your grinding Time via digital Timer based o
 
 ## Changelog
 Feel free to optimize your own Branch of this Code, we will not Change this one.
-
-# Special Thanks
-to the great work Joerky!
-!! Thank you so much for the tasty cup of coffee I enjoy each day !!  
+Changed the Display to SSD1306
 
 
 # Disclaimer
